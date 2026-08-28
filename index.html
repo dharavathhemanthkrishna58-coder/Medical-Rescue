@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MediResQ | Emergency Healthcare</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      <div class="logo-icon">🚑</div>
+
+      <div>
+        <h2>MediResQ</h2>
+        <p>Emergency Healthcare</p>
+      </div>
+    </div>
+
+    <div class="location">
+      📍 Ghatkesar, Telangana
+    </div>
+
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <span>EMERGENCY RESPONSE SYSTEM</span>
+
+      <h1>
+        Help when every second matters.
+      </h1>
+
+      <p>
+        Quickly connect with ambulances and nearby emergency hospitals.
+      </p>
+
+    </section>
+
+
+    <!-- SOS SECTION -->
+    <section class="sos-card">
+
+      <div>
+
+        <h2>
+          🚨 Need Emergency Help?
+        </h2>
+
+        <p>
+          Request the nearest available ambulance immediately.
+        </p>
+
+      </div>
+
+      <button
+        class="sos-button"
+        onclick="requestAmbulance()"
+      >
+        REQUEST AMBULANCE
+      </button>
+
+    </section>
+
+
+    <!-- FEATURE CARDS -->
+    <section class="cards">
+
+
+      <!-- AMBULANCE -->
+      <div class="card">
+
+        <div class="icon">
+          🚑
+        </div>
+
+        <h3>
+          Find Ambulance
+        </h3>
+
+        <p>
+          Locate the nearest available ambulance and check its estimated
+          arrival time.
+        </p>
+
+        <button
+          onclick="showMessage('Searching for nearby ambulances...')"
+        >
+          Find Ambulance →
+        </button>
+
+      </div>
+
+
+      <!-- HOSPITAL -->
+      <div class="card">
+
+        <div class="icon">
+          🏥
+        </div>
+
+        <h3>
+          Nearby Hospitals
+        </h3>
+
+        <p>
+          Find suitable hospitals with emergency facilities and available
+          capacity.
+        </p>
+
+        <button
+          onclick="showMessage('Finding suitable hospitals...')"
+        >
+          Find Hospital →
+        </button>
+
+      </div>
+
+
+      <!-- ROUTE -->
+      <div class="card">
+
+        <div class="icon">
+          🗺️
+        </div>
+
+        <h3>
+          Fastest Route
+        </h3>
+
+        <p>
+          Find the fastest route between the ambulance and selected hospital.
+        </p>
+
+        <button
+          onclick="showMessage('Calculating fastest route...')"
+        >
+          View Route →
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMATION SECTION -->
+    <section class="info-grid">
+
+
+      <!-- HOSPITAL INFORMATION -->
+      <div class="info-card">
+
+        <h3>
+          🏥 Emergency Hospitals
+        </h3>
+
+
+        <div class="hospital">
+
+          <div>
+
+            <b>
+              Apollo Hospitals
+            </b>
+
+            <small>
+              Emergency Department
+            </small>
+
+          </div>
+
+          <span class="available">
+            AVAILABLE
+          </span>
+
+        </div>
+
+
+        <div class="hospital">
+
+          <div>
+
+            <b>
+              Yashoda Hospitals
+            </b>
+
+            <small>
+              Trauma & Emergency Care
+            </small>
+
+          </div>
+
+          <span class="available">
+            AVAILABLE
+          </span>
+
+        </div>
+
+
+        <div class="hospital">
+
+          <div>
+
+            <b>
+              Sunshine Hospital
+            </b>
+
+            <small>
+              Emergency Services
+            </small>
+
+          </div>
+
+          <span class="busy">
+            BUSY
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- AMBULANCE INFORMATION -->
+      <div class="info-card">
+
+        <h3>
+          🚑 Ambulance Status
+        </h3>
+
+
+        <div class="ambulance">
+
+          <div>
+
+            <b>
+              Ambulance AP-09-EM-2456
+            </b>
+
+            <span>
+              2.1 km away • ETA 6 min
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="ambulance">
+
+          <div>
+
+            <b>
+              Ambulance TS-08-ER-1182
+            </b>
+
+            <span>
+              3.7 km away • ETA 10 min
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOCATION -->
+    <section class="location-card">
+
+      <h3>
+        📍 Current Location
+      </h3>
+
+      <p>
+        Your emergency location
+      </p>
+
+      <strong>
+        Ghatkesar, Telangana
+      </strong>
+
+    </section>
+
+  </main>
+
+
+  <!-- EMERGENCY POPUP -->
+  <div
+    id="modal"
+    class="modal"
+  >
+
+    <div class="modal-box">
+
+      <div class="modal-icon">
+        🚨
+      </div>
+
+      <h2>
+        Request Ambulance?
+      </h2>
+
+      <p>
+        An ambulance will be dispatched to your current location.
+      </p>
+
+      <button
+        class="confirm"
+        onclick="confirmRequest()"
+      >
+        CONFIRM REQUEST
+      </button>
+
+      <button
+        class="cancel"
+        onclick="closeModal()"
+      >
+        CANCEL
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
